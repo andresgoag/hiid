@@ -26,7 +26,7 @@ export const Login = () => {
 
 			<div className="form-container">
 				<form className="form" action="">
-					<label for="input-email" style="display: none;">
+					<label htmlFor="input-email" className="hidden">
 						Tu email
 					</label>
 					<input
@@ -39,7 +39,7 @@ export const Login = () => {
 					/>
 
 					<div className="password-input">
-						<label for="input-password" style="display: none;">
+						<label htmlFor="input-password" className="hidden">
 							Contraseña
 						</label>
 						<input
@@ -55,7 +55,7 @@ export const Login = () => {
 
 					<input type="submit" className="form__submit" value="Entrar" />
 
-					<label className="form__custom-checkbox" for="mantener_sesion">
+					<label className="form__custom-checkbox" htmlFor="mantener_sesion">
 						<input type="checkbox" id="mantener_sesion" name="mantener_sesion" value="mantener_sesion" />
 						<span className="checkmark" />
 						<p>Mantener sesión iniciada</p>
