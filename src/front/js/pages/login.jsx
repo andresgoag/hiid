@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "../../styles/home.scss";
+import "../../styles/login.scss";
 // import { Context } from "../store/appContext";
 
 export const Login = () => {
