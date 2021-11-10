@@ -16,9 +16,9 @@ export const Login = () => {
 
 			<div className="slogan-container">
 				<div className="slogan-subcontainer">
-					<p className="slogan">Conéctate como nunca con tus clientes</p>
+					<p className="slogan">Connect with your customers like never before</p>
 					<p className="crear_cuenta_desktop">
-						¿Aún no eres miembro? <a href="#">Crea una cuenta</a>
+						Not a member? <a href="#">Create an account</a>
 					</p>
 				</div>
 			</div>
@@ -26,27 +26,27 @@ export const Login = () => {
 			<div className="form-container">
 				<form className="form" action="">
 					<label htmlFor="input-email" className="hidden">
-						Tu email
+						Email
 					</label>
 					<input
 						type="text"
 						className="form__input"
 						id="input-email"
 						name="input-email"
-						placeholder="Tu email"
+						placeholder="Your email"
 						required
 					/>
 
 					<div className="password-input">
 						<label htmlFor="input-password" className="hidden">
-							Contraseña
+							Password
 						</label>
 						<input
 							type="password"
 							className="form__input"
 							id="input-password"
 							name="input-password"
-							placeholder="Contraseña"
+							placeholder="Password"
 							required
 						/>
 						<a className="eye-icon" />
@@ -57,13 +57,13 @@ export const Login = () => {
 					<label className="form__custom-checkbox" htmlFor="mantener_sesion">
 						<input type="checkbox" id="mantener_sesion" name="mantener_sesion" value="mantener_sesion" />
 						<span className="checkmark" />
-						<p>Mantener sesión iniciada</p>
+						<p>Keep me logged in</p>
 					</label>
 				</form>
 			</div>
 
 			<p className="crear_cuenta">
-				¿Aún no eres miembro? <a href="#">Crea una cuenta</a>
+				Not a member? <a href="#">Create an account</a>
 			</p>
 		</div>
 	);
