@@ -1,3 +1,19 @@
 /* 
     General Styles
 */
+
+:root {
+    --primary-color: #9AD89A;
+    --primary-font: #AAAAAA;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
