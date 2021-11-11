@@ -5,14 +5,14 @@ import "../../styles/input.scss";
 export const Input = props => {
 	return (
 		<div className="input__group">
-			<label htmlFor={`input__${props.label}`} className="hidden">
+			<label htmlFor={`input__${props.name}`} className="hidden">
 				{props.label}
 			</label>
 			<div className="input__form">
 				<input
 					type={props.type}
-					id={`${props.label}`}
-					name={`${props.label}`}
+					id={`input__${props.name}`}
+					name={`${props.name}`}
 					placeholder={props.label}
 					value={props.value}
 					required
@@ -31,5 +31,6 @@ Input.propTypes = {
 	icon: PropTypes.string,
 	description: PropTypes.string,
 	value: PropTypes.string,
-	handler: PropTypes.func
+	handler: PropTypes.func,
+	name: PropTypes.string
 };

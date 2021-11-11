@@ -36,11 +36,20 @@ export const Login = () => {
 
 			<div className="form-container">
 				<form className="form" action="">
-					<Input type="text" label="email" icon="" description="" value={user.email} handler={handleInput} />
+					<Input
+						type="text"
+						label="email"
+						icon=""
+						name="email"
+						description=""
+						value={user.email}
+						handler={handleInput}
+					/>
 					<Input
 						type="password"
 						label="password"
 						icon="bi bi-eye-fill"
+						name="password"
 						description=""
 						value={user.password}
 						handler={handleInput}
