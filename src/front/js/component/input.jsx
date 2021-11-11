@@ -11,14 +11,16 @@ export const Input = props => {
 			<div className="input__form">
 				<input
 					type={props.type}
-					id={`input__${props.label}`}
-					name={`input__${props.label}`}
+					id={`${props.label}`}
+					name={`${props.label}`}
 					placeholder={props.label}
+					value={props.value}
 					required
+					onChange={ev => props.handler(ev)}
 				/>
 				<i className={props.icon} />
 			</div>
-			<p className="input__description">{`*  ${props.description}`}</p>
+			<p className="input__description">{`${props.description}`}</p>
 		</div>
 	);
 };
@@ -27,5 +29,7 @@ Input.propTypes = {
 	type: PropTypes.string,
 	label: PropTypes.string,
 	icon: PropTypes.string,
-	description: PropTypes.string
+	description: PropTypes.string,
+	value: PropTypes.string,
+	handler: PropTypes.func
 };
