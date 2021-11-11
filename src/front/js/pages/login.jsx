@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "../../styles/login.scss";
 import { Input } from "../component/input.jsx";
+import { Link } from "react-router-dom";
 // import { Context } from "../store/appContext";
 
 export const Login = () => {
@@ -27,7 +28,8 @@ export const Login = () => {
 				<div className="slogan-subcontainer">
 					<p className="slogan">Connect with your customers like never before</p>
 					<p className="crear_cuenta_desktop">
-						Not a member? <a href="#">Create an account</a>
+						Not a member?
+						<Link to="/register"> Create an account</Link>
 					</p>
 				</div>
 			</div>
@@ -44,7 +46,7 @@ export const Login = () => {
 						handler={handleInput}
 					/>
 
-					<input type="button" className="form__submit" value="Entrar" />
+					<input type="button" className="form__submit" value="Log in" />
 
 					<label className="form__custom-checkbox" htmlFor="mantener_sesion">
 						<input type="checkbox" id="mantener_sesion" name="mantener_sesion" value="mantener_sesion" />

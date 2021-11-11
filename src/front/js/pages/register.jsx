@@ -1,61 +1,100 @@
-import React from 'react'
+import React from "react";
+import "../../styles/login.scss";
+import { Input } from "../component/input.jsx";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
-    return (
-        <div>
-            <figure class="background">
-                <img src="https://m-lp.com/wp-content/uploads/2021/11/FloatingCardsGrey.png" alt="" />
-            </figure>
+	const [user, setUser] = React.useState({ email: "", password: "", passwordVerify: "" });
+	return (
+		<div>
+			<figure className="background">
+				<img src="https://m-lp.com/wp-content/uploads/2021/11/FloatingCardsGrey.png" alt="" />
+			</figure>
 
-            <figure class="logo">
-                <img src="https://m-lp.com/wp-content/uploads/2021/11/Hiidlogo.png" alt="" />
-            </figure>
+			<figure className="logo">
+				<img src="https://m-lp.com/wp-content/uploads/2021/11/Hiidlogo.png" alt="" />
+			</figure>
 
-            <div class="slogan-container">
-                <div class="slogan-subcontainer">
-                    <p class="slogan">Conéctate como nunca con tus clientes</p>
-                    <p class="crear_cuenta_desktop">¿Ya eres miembro? <a href="#">Inicia sesión</a></p>
-                </div>
-            </div>
+			<div className="slogan-container">
+				<div className="slogan-subcontainer">
+					<p className="slogan">Connect with your customers like never before</p>
+					<p className="crear_cuenta_desktop">
+						Already a member?
+						<Link to="/login"> Login</Link>
+					</p>
+				</div>
+			</div>
 
+			<div className="form-container">
+				<form className="form" action="">
+					<Input type="text" label="email" icon="" description="" value={user.email} handler={handleInput} />
+					<Input
+						type="password"
+						label="password"
+						icon="bi bi-eye-fill"
+						description=""
+						value={user.password}
+						handler={handleInput}
+					/>
 
-            <div class="form-container">
-                <form class="form" action="">
-            
-                <label for="input-email" style="display: none;">Tu email</label>
-                    <input type="text" class="form__input" id="input-email" name="input-email" placeholder="Tu email" required />
-            
-                    <div class="password-input">
-                        <label for="input-password" style="display: none;">Contraseña</label>
-                        <input type="password" class="form__input" id="input-password" name="input-password" placeholder="Crea una contraseña" required />
-                        <a class="eye-icon"></a>
-                    </div>
+					<label htmlFor="input-email" className="hidden">
+						Tu email
+					</label>
+					<input
+						type="text"
+						className="form__input"
+						id="input-email"
+						name="input-email"
+						placeholder="Tu email"
+						required
+					/>
 
-                    <div class="password-input">
-                        <label for="input-password-repeat" style="display: none;">Repite contraseña</label>
-                        <input type="password" class="form__input" id="input-password-repeat" name="input-password-repeat" placeholder="Verifica tu contraseña" required />
-                        <a class="eye-icon"></a>
-                    </div>
-            
-                    <input type="submit" class="form__submit" value="Entrar" />
+					<div className="password-input">
+						<label htmlFor="input-password" className="hidden">
+							Contraseña
+						</label>
+						<input
+							type="password"
+							className="form__input"
+							id="input-password"
+							name="input-password"
+							placeholder="Crea una contraseña"
+							required
+						/>
+						<a className="eye-icon" />
+					</div>
 
-                    <label class="form__custom-checkbox" for="acepto-terminos">
-                        <input type="checkbox" id="acepto-terminos" name="acepto-terminos" value="acepto-terminos" />
-                        <span class="checkmark"></span>
-                        <p class="links_terminos">
-                            Acepto los 
-                            <a href="#">términos y condiciones</a>
-                            y la 
-                            <a href="#">política de privacidad</a> de la web.
-                        </p>
-                    </label>
+					<div className="password-input">
+						<label htmlFor="input-password-repeat" className="hidden">
+							Repite contraseña
+						</label>
+						<input
+							type="password"
+							className="form__input"
+							id="input-password-repeat"
+							name="input-password-repeat"
+							placeholder="Verifica tu contraseña"
+							required
+						/>
+						<a className="eye-icon" />
+					</div>
 
-                </form>
-            </div>
+					<input type="submit" className="form__submit" value="Create account" />
 
+					<label className="form__custom-checkbox" htmlFor="acepto-terminos">
+						<input type="checkbox" id="acepto-terminos" name="acepto-terminos" value="acepto-terminos" />
+						<span className="checkmark" />
+						<p className="links_terminos">
+							I agree with the terms and conditions and with the privacy policy of this website.
+						</p>
+					</label>
+				</form>
+			</div>
 
-
-            <p class="crear_cuenta">¿Ya eres miembro? <a href="#">Inicia sesión</a></p>
-        </div>
-    )
-}
+			<p className="crear_cuenta">
+				Already a member?
+				<Link to="/login"> Login</Link>
+			</p>
+		</div>
+	);
+};

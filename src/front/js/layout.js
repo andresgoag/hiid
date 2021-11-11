@@ -6,6 +6,7 @@ import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import { Login } from "./pages/login.jsx";
+import { Register } from "./pages/register.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -27,6 +28,10 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/login">
 							<Login />
+						</Route>
+
+						<Route exact path="/register">
+							<Register />
 						</Route>
 
 						<Route exact path="/input">
