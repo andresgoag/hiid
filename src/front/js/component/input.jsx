@@ -8,7 +8,7 @@ export const Input = props => {
 			<label htmlFor={`input__${props.label}`} className="hidden">
 				{props.label}
 			</label>
-			<div className="input__input">
+			<div className="input__form">
 				<input
 					type={props.type}
 					id={`input__${props.label}`}

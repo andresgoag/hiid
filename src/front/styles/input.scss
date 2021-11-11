@@ -4,7 +4,7 @@
     padding: 0 5px;
 }
 
-.input__input {
+.input__form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,7 @@
 
 }
 
-.input__input input {
+.input__form input {
     -webkit-appearance: none;
     border: none;
     outline: none;
@@ -25,15 +25,15 @@
     padding-left: 10px;
 }
 
-.input__input i {
+.input__form i {
     // position: absolute;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-font);
     padding-right: 10px;
     cursor: pointer;
 }
 
-.input__input i:hover {
+.input__form i:hover {
     opacity: 80%;
 } 
 
@@ -43,6 +43,7 @@ input::placeholder {
 }
 
 .input__description {
+    height: 19px;
     margin-top: 5px;
     font-size: 1.6rem;
     color: var(--primary-color);
