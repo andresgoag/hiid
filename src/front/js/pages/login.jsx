@@ -1,9 +1,17 @@
 import React, { useContext } from "react";
 import "../../styles/login.scss";
+import { Input } from "../component/input.jsx";
 // import { Context } from "../store/appContext";
 
 export const Login = () => {
 	// const { store, actions } = useContext(Context);
+
+	const [user, setUser] = React.useState({ email: "", password: "" });
+
+	const handleInput = ev => {
+		const input = ev.currentTarget;
+		setUser({ ...user, [input.name]: input.value });
+	};
 
 	return (
 		<div>
@@ -26,34 +34,17 @@ export const Login = () => {
 
 			<div className="form-container">
 				<form className="form" action="">
-					<label htmlFor="input-email" className="hidden">
-						Email
-					</label>
-					<input
-						type="text"
-						className="form__input"
-						id="input-email"
-						name="input-email"
-						placeholder="Your email"
-						required
+					<Input type="text" label="email" icon="" description="" value={user.email} handler={handleInput} />
+					<Input
+						type="password"
+						label="password"
+						icon="bi bi-eye-fill"
+						description=""
+						value={user.password}
+						handler={handleInput}
 					/>
 
-					<div className="password-input">
-						<label htmlFor="input-password" className="hidden">
-							Password
-						</label>
-						<input
-							type="password"
-							className="form__input"
-							id="input-password"
-							name="input-password"
-							placeholder="Password"
-							required
-						/>
-						<a className="eye-icon" />
-					</div>
-
-					<input type="submit" className="form__submit" value="Entrar" />
+					<input type="button" className="form__submit" value="Entrar" />
 
 					<label className="form__custom-checkbox" htmlFor="mantener_sesion">
 						<input type="checkbox" id="mantener_sesion" name="mantener_sesion" value="mantener_sesion" />
