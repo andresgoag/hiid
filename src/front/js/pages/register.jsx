@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 
 export const Register = () => {
 	const [user, setUser] = React.useState({ email: "", password: "", passwordVerify: "" });
+
+	const handleInput = ev => {
+		const input = ev.currentTarget;
+		setUser({ ...user, [input.name]: input.value });
+	};
+
 	return (
 		<div>
 			<figure className="background">
@@ -27,57 +33,33 @@ export const Register = () => {
 
 			<div className="form-container">
 				<form className="form" action="">
-					<Input type="text" label="email" icon="" description="" value={user.email} handler={handleInput} />
+					<Input
+						type="text"
+						label="your email"
+						icon=""
+						name="email"
+						description=""
+						value={user.email}
+						handler={handleInput}
+					/>
 					<Input
 						type="password"
-						label="password"
+						label="create password"
 						icon="bi bi-eye-fill"
+						name="password"
 						description=""
 						value={user.password}
 						handler={handleInput}
 					/>
-
-					<label htmlFor="input-email" className="hidden">
-						Tu email
-					</label>
-					<input
-						type="text"
-						className="form__input"
-						id="input-email"
-						name="input-email"
-						placeholder="Tu email"
-						required
+					<Input
+						type="password"
+						label="re-enter password"
+						icon="bi bi-eye-fill"
+						name="password"
+						description=""
+						value={user.password}
+						handler={handleInput}
 					/>
-
-					<div className="password-input">
-						<label htmlFor="input-password" className="hidden">
-							Contraseña
-						</label>
-						<input
-							type="password"
-							className="form__input"
-							id="input-password"
-							name="input-password"
-							placeholder="Crea una contraseña"
-							required
-						/>
-						<a className="eye-icon" />
-					</div>
-
-					<div className="password-input">
-						<label htmlFor="input-password-repeat" className="hidden">
-							Repite contraseña
-						</label>
-						<input
-							type="password"
-							className="form__input"
-							id="input-password-repeat"
-							name="input-password-repeat"
-							placeholder="Verifica tu contraseña"
-							required
-						/>
-						<a className="eye-icon" />
-					</div>
 
 					<input type="submit" className="form__submit" value="Create account" />
 
