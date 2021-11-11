@@ -55,9 +55,9 @@ export const Register = () => {
 						type="password"
 						label="re-enter password"
 						icon="bi bi-eye-fill"
-						name="password"
+						name="passwordVerify"
 						description=""
-						value={user.password}
+						value={user.passwordVerify}
 						handler={handleInput}
 					/>
 
