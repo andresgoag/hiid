@@ -9,6 +9,8 @@ import { Login } from "./pages/login.jsx";
 
 import injectContext from "./store/appContext";
 
+import { Input } from "./component/input.jsx";
+
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -26,6 +28,13 @@ const Layout = () => {
 						<Route exact path="/login">
 							<Login />
 						</Route>
+
+						<Route exact path="/input">
+							<div className="pruebainput">
+								<Input type="text" label="Name" icon="bi bi-eye-fill" description="Field" />
+							</div>
+						</Route>
+
 						<Route exact path="/demo">
 							<Demo />
 						</Route>

@@ -17,3 +17,16 @@ html {
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
 }
+
+button {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+.pruebainput {
+    width: 600px;
+    border: 1px solid black;
+}
