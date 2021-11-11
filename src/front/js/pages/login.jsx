@@ -38,7 +38,7 @@ export const Login = () => {
 				<form className="form" action="">
 					<Input
 						type="text"
-						label="email"
+						label="your email"
 						icon=""
 						name="email"
 						description=""

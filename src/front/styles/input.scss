@@ -1,6 +1,6 @@
 .input__group {
     margin-bottom: 3px;
-    background-color: #ffffff;
+    background: transparent;
     padding: 0 5px;
 }
 
@@ -23,6 +23,7 @@
     font-size: 2rem;
     color: var(--primary-font);
     padding-left: 10px;
+    border-radius: 15px;
 }
 
 .input__form i {
@@ -40,6 +41,7 @@
 input::placeholder {
     color: var(--primary-font);
     font-size: 2rem;
+    text-transform: capitalize;
 }
 
 .input__description {
