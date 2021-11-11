@@ -185,7 +185,7 @@ input::placeholder {
     color: var(--primary-color);
 }
 
-.crear_cuenta_desktop p {
+.crear_cuenta_desktop a {
     text-decoration: none;
     font-weight: bold;
     color: var(--primary-color);
@@ -203,14 +203,10 @@ input::placeholder {
     margin-top: 100px;
 }
 
-.crear_cuenta p {
+.crear_cuenta a {
     text-decoration: none;
     font-weight: bold;
     color: var(--primary-color);
-}
-
-.crear_cuenta a:hover {
-    text-decoration: underline;
 }
 
 .links_terminos a {
