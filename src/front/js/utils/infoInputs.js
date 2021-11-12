@@ -8,9 +8,9 @@ export const infoInputs = [
 	},
 	{
 		type: "text",
-		label: "last_name",
+		label: "last name",
 		icon: "",
-		name: "last",
+		name: "last_name",
 		description: ""
 	},
 	{
