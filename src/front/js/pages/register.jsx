@@ -67,7 +67,7 @@ export const Register = () => {
 						<input type="checkbox" id="acepto-terminos" name="acepto-terminos" value="acepto-terminos" />
 						<span className="checkmark" />
 						<p className="links_terminos">
-							I agree with the terms and conditions and with the privacy policy of this website.
+							I agree with the terms and conditions and the privacy policy of this website.
 						</p>
 					</label>
 				</form>

@@ -1,21 +1,15 @@
+import { userModel } from "../utils/userModel.js";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			message: null,
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			userModel: userModel
 		},
 		actions: {
+			setUserProperty: (property, value) => {
+				const store = getStore();
+				setStore({ ...store, userModel: { ...store.userModel, [property]: value } });
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

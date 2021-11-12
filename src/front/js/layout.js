@@ -7,6 +7,7 @@ import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import { Login } from "./pages/login.jsx";
 import { Register } from "./pages/register.jsx";
+import { Info } from "./pages/info.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -30,6 +31,10 @@ const Layout = () => {
 
 						<Route exact path="/register">
 							<Register />
+						</Route>
+
+						<Route exact path="/dashboard">
+							<Info />
 						</Route>
 
 						<Route exact path="/demo">

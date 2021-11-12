@@ -1,22 +1,30 @@
 import React from "react";
+import { Context } from "../store/appContext";
+import { Input } from "../component/input.jsx";
+import { infoInputs } from "../utils/infoInputs.js";
 
 export const Info = () => {
-    const [user, setUser] = React.useState({ email: "", password: "" });
+	const { store, actions } = React.useContext(Context);
 
 	const handleInput = ev => {
 		const input = ev.currentTarget;
-		setUser({ ...user, [input.name]: input.value });
+		actions.setUserProperty(input.name, input.value);
 	};
 
-    return (
-		<Input
-						type="text"
-						label="your email"
-						icon=""
-						name="email"
-						description=""
-						value={user.email}
-						handler={handleInput}
-					/>
-    )
-}
+	return (
+		<div>
+			{infoInputs.map((item, index) => (
+				<Input
+					key={index}
+					type={item.type}
+					label={item.label}
+					icon={item.icon}
+					name={item.name}
+					description={item.description}
+					value={store.userModel[item.name]}
+					handler={handleInput}
+				/>
+			))}
+		</div>
+	);
+};
