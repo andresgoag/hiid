@@ -64,9 +64,9 @@ export const infoInputs = [
 	},
 	{
 		type: "url",
-		label: "faceook",
+		label: "facebook",
 		icon: "",
-		name: "faceook",
+		name: "facebook",
 		description: "* facebook.com/username"
 	},
 	{
