@@ -8,7 +8,7 @@ export const infoInputs = [
 	},
 	{
 		type: "text",
-		label: "last",
+		label: "last_name",
 		icon: "",
 		name: "last",
 		description: ""
