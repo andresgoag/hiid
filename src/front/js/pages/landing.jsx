@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Landing = () => {
-    return ()
-}
+	return <div>Hola</div>;
+};

@@ -33,12 +33,15 @@ const Layout = () => {
 							<Register />
 						</Route>
 
-						<Route exact path="/landing">
-							<Landing />
-						</Route>
-
 						<Route exact path="/dashboard">
-							<Info />
+							<div className="d-flex w-100">
+								<div className="w-50">
+									<Info />
+								</div>
+								<div className="w-50">
+									<Landing />
+								</div>
+							</div>
 						</Route>
 
 						<Route exact path="/demo">
