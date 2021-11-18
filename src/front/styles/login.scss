@@ -113,11 +113,22 @@
 
 /* Style the checkmark/indicator */
 .form__custom-checkbox .checkmark::after {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
+    // width: 8px;
+    // height: 8px;
+    // border-radius: 99px;
+    // background-color: var(--primary-color);
+    // margin: 2px;
+    width: 0.8em;
+    height: 0.8em;
     background-color: var(--primary-color);
-    margin: 2px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 0px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 1px;
 }
 
 /* Custom checkbox */
