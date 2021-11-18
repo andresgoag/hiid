@@ -20,13 +20,13 @@ export const userModel = {
 };
 
 export let socialArray = [
-	{ instagram: "fab fa-instagram" },
-	{ facebook: "fab fa-facebook-f" },
-	{ whatsapp: "fab fa-whatsapp" },
-	{ twitter: "fab fa-twitter" },
-	{ snapchat: "fab fa-snapchat-ghost" },
-	{ linkedin: "fab fa-linkedin-in" },
-	{ youtube: "fab fa-youtube" },
-	{ behance: "fab fa-behance" },
-	{ tiktok: "fab fa-tiktok" }
+	["instagram", "fab fa-instagram"],
+	["facebook", "fab fa-facebook-f"],
+	["whatsapp", "fab fa-whatsapp"],
+	["twitter", "fab fa-twitter"],
+	["snapchat", "fab fa-snapchat-ghost"],
+	["linkedin", "fab fa-linkedin-in"],
+	["youtube", "fab fa-youtube"],
+	["behance", "fab fa-behance"],
+	["tiktok", "fab fa-tiktok"]
 ];
