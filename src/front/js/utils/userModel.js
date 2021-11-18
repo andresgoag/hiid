@@ -18,3 +18,15 @@ export const userModel = {
 	maps: "",
 	website: ""
 };
+
+export let socialArray = [
+	"instagram",
+	"facebook",
+	"whatsapp",
+	"twitter",
+	"snapchat",
+	"linkedin",
+	"youtube",
+	"behance",
+	"tiktok"
+];
