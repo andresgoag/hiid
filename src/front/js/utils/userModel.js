@@ -28,5 +28,5 @@ export const socialArray = [
 	["linkedin", "fab fa-linkedin-in"],
 	["youtube", "fab fa-youtube"],
 	["behance", "fab fa-behance"],
-	["tiktok", "fab fa-tiktok"]
+	["tiktok", "fab fa-angellist"]
 ];
