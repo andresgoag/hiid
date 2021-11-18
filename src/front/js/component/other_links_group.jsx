@@ -8,15 +8,17 @@ export const OtherLinksGroup = () => {
 	return (
 		<div>
 			{otherLinksArray.map((item, index) => {
-				return (
-					<OtherLink
-						key={`OtherLink${index}`}
-						link={store.userModel[item[0]]}
-						icon={item[1]}
-						name={item[0]}
-						button={item[2]}
-					/>
-				);
+				if (store.userModel[item[0]] != "") {
+					return (
+						<OtherLink
+							key={`OtherLink${index}`}
+							link={item[0] == "email" ? `mailto: ${store.userModel[item[0]]}` : store.userModel[item[0]]}
+							icon={item[1]}
+							name={item[0]}
+							button={item[2]}
+						/>
+					);
+				}
 			})}
 		</div>
 	);

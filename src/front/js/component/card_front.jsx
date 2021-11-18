@@ -7,6 +7,7 @@ export const CardFront = props => {
 			<p>{props.name}</p>
 			<p>{props.last}</p>
 			<p>{props.title}</p>
+			<p>{props.company}</p>
 		</div>
 	);
 };
@@ -14,5 +15,6 @@ export const CardFront = props => {
 CardFront.propTypes = {
 	name: PropTypes.string,
 	last: PropTypes.string,
-	title: PropTypes.string
+	title: PropTypes.string,
+	company: PropTypes.string
 };
