@@ -30,3 +30,9 @@ export const socialArray = [
 	["behance", "fab fa-behance"],
 	["tiktok", "fab fa-angellist"]
 ];
+
+export const otherLinksArray = [
+	["website", "fas fa-globe", "visit wwebsite"],
+	["maps", "fas fa-map-marker-alt", "view in map"],
+	["email", "fas fa-envelope", "send email"]
+];
