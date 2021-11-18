@@ -8,7 +8,7 @@ import { Single } from "./pages/single";
 import { Login } from "./pages/login.jsx";
 import { Register } from "./pages/register.jsx";
 import { Info } from "./pages/info.jsx";
-
+import { Landing } from "./pages/landing.jsx";
 import injectContext from "./store/appContext";
 
 //create your first component
@@ -31,6 +31,10 @@ const Layout = () => {
 
 						<Route exact path="/register">
 							<Register />
+						</Route>
+
+						<Route exact path="/landing">
+							<Landing />
 						</Route>
 
 						<Route exact path="/dashboard">
