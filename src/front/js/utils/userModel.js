@@ -19,7 +19,7 @@ export const userModel = {
 	website: ""
 };
 
-export let socialArray = [
+export const socialArray = [
 	{ instagram: "fab fa-instagram" },
 	{ facebook: "fab fa-facebook-f" },
 	{ whatsapp: "fab fa-whatsapp" },
