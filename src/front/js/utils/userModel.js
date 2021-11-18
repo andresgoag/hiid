@@ -19,7 +19,6 @@ export const userModel = {
 	website: ""
 };
 
-
 export const socialArray = [
 	["instagram", "fab fa-instagram"],
 	["facebook", "fab fa-facebook-f"],
@@ -30,4 +29,4 @@ export const socialArray = [
 	["youtube", "fab fa-youtube"],
 	["behance", "fab fa-behance"],
 	["tiktok", "fab fa-tiktok"]
-]
+];
