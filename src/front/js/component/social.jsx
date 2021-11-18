@@ -13,5 +13,3 @@ Social.propTypes = {
 	link: PropTypes.string,
 	icon: PropTypes.string
 };
-
-// onClick={()=> window.open(props.link, "_blank")}
