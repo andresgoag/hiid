@@ -9,7 +9,7 @@ import { Login } from "./pages/login.jsx";
 import { Register } from "./pages/register.jsx";
 import { Info } from "./component/info.jsx";
 import { Landing } from "./pages/landing.jsx";
-import { Graph } from "./component/graph.jsx";
+import { Stats } from "./component/stats.jsx";
 import { Dashboard } from "./pages/dashboard.jsx";
 
 import injectContext from "./store/appContext";
@@ -42,7 +42,7 @@ const Layout = () => {
 						</Route>
 
 						<Route exact path="/graph">
-							<Graph />
+							<Stats />
 						</Route>
 
 						<Route exact path="/:username">

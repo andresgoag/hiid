@@ -21,6 +21,13 @@ export const infoInputs = [
 		description: ""
 	},
 	{
+		type: "string",
+		label: "zip code",
+		icon: "",
+		name: "zip_code",
+		description: "* i.e: 33023"
+	},
+	{
 		type: "text",
 		label: "job title",
 		icon: "",

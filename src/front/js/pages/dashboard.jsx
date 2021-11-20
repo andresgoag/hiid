@@ -1,11 +1,15 @@
 import React from "react";
 import { Info } from "../component/info.jsx";
 import { Landing } from "./landing.jsx";
+import { Stats } from "../component/stats.jsx";
+import "../../styles/dashboard.scss";
+
 export const Dashboard = () => {
 	return (
-		<div>
-			<div className="w50">
+		<div className="dashboard">
+			<div className="w50 info">
 				<Info />
+				<Stats />
 			</div>
 			<div className="w50">
 				<Landing />

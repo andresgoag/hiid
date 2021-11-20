@@ -2,6 +2,7 @@ export const userModel = {
 	name: "",
 	last_name: "",
 	company: "",
+	zip_code: "",
 	job_title: "",
 	slogan: "",
 	description: "",
