@@ -16,7 +16,8 @@ export const userModel = {
 	behance: "",
 	snapchat: "",
 	maps: "",
-	website: ""
+	website: "",
+	sector: ""
 };
 
 export const socialArray = [

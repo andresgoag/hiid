@@ -124,5 +124,12 @@ export const infoInputs = [
 		icon: "",
 		name: "website",
 		description: "* mywebsite.com"
+	},
+	{
+		type: "text",
+		label: "Sector",
+		icon: "",
+		name: "sector",
+		description: "* ie: Engineering"
 	}
 ];
