@@ -25,6 +25,7 @@ export const Info = () => {
 					handler={handleInput}
 				/>
 			))}
+			<button>Save</button>
 		</div>
 	);
 };

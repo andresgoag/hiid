@@ -11,16 +11,24 @@ export const Landing = () => {
 
 	return (
 		<div>
-			<CardFront
-				name={store.userModel.name}
-				last={store.userModel.last_name}
-				title={store.userModel.job_title}
-				company={store.userModel.company}
-			/>
-			<CardBack slogan={store.userModel.slogan} />
-			<Description description={store.userModel.description} />
-			<SocialGroup />
-			<OtherLinksGroup />
+			<div>
+				<CardFront
+					name={store.userModel.name}
+					last={store.userModel.last_name}
+					title={store.userModel.job_title}
+					company={store.userModel.company}
+				/>
+				<CardBack slogan={store.userModel.slogan} />
+				<Description description={store.userModel.description} />
+				<SocialGroup />
+				<OtherLinksGroup />
+			</div>
+			<div>
+				<button>
+					<i className="fas fa-qrcode" />
+					Share
+				</button>
+			</div>
 		</div>
 	);
 };
