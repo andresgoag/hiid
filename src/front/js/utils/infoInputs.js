@@ -131,5 +131,12 @@ export const infoInputs = [
 		icon: "",
 		name: "sector",
 		description: "* ie: Engineering"
+	},
+	{
+		type: "text",
+		label: "username",
+		icon: "",
+		name: "username",
+		description: "* This will be your custom URL"
 	}
 ];

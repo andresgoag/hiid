@@ -46,6 +46,10 @@ const Layout = () => {
 							</div>
 						</Route>
 
+						<Route exact path="/:username">
+							<Landing />
+						</Route>
+
 						<Route exact path="/stats">
 							<Stats />
 						</Route>

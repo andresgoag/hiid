@@ -17,7 +17,8 @@ export const userModel = {
 	snapchat: "",
 	maps: "",
 	website: "",
-	sector: ""
+	sector: "",
+	username: ""
 };
 
 export const socialArray = [

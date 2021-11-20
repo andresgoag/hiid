@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { CardFront } from "../component/card_front.jsx";
 import { CardBack } from "../component/card_back.jsx";
 import { Description } from "../component/description.jsx";
@@ -8,9 +9,11 @@ import { Context } from "../store/appContext";
 
 export const Landing = () => {
 	const { store, actions } = React.useContext(Context);
+	const params = useParams();
 
 	return (
 		<div>
+			<p>{params.username}</p>
 			<div>
 				<CardFront
 					name={store.userModel.name}
