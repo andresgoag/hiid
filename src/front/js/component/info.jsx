@@ -1,6 +1,6 @@
 import React from "react";
 import { Context } from "../store/appContext";
-import { Input } from "../component/input.jsx";
+import { Input } from "./input.jsx";
 import { infoInputs } from "../utils/infoInputs.js";
 
 export const Info = () => {

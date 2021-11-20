@@ -26,12 +26,6 @@ export const Landing = () => {
 				<SocialGroup />
 				<OtherLinksGroup />
 			</div>
-			<div>
-				<button>
-					<i className="fas fa-qrcode" />
-					Share
-				</button>
-			</div>
 		</div>
 	);
 };

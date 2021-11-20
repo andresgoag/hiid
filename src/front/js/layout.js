@@ -7,9 +7,10 @@ import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import { Login } from "./pages/login.jsx";
 import { Register } from "./pages/register.jsx";
-import { Info } from "./pages/info.jsx";
+import { Info } from "./component/info.jsx";
 import { Landing } from "./pages/landing.jsx";
-import { Stats } from "./pages/stats.jsx";
+import { Graph } from "./component/graph.jsx";
+import { Dashboard } from "./pages/dashboard.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -27,6 +28,7 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
+
 						<Route exact path="/login">
 							<Login />
 						</Route>
@@ -36,30 +38,17 @@ const Layout = () => {
 						</Route>
 
 						<Route exact path="/dashboard">
-							<div className="d-flex w-100">
-								<div className="w-50">
-									<Info />
-								</div>
-								<div className="w-50">
-									<Landing />
-								</div>
-							</div>
+							<Dashboard />
+						</Route>
+
+						<Route exact path="/graph">
+							<Graph />
 						</Route>
 
 						<Route exact path="/:username">
 							<Landing />
 						</Route>
 
-						<Route exact path="/stats">
-							<Stats />
-						</Route>
-
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
