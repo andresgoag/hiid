@@ -16,3 +16,14 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+@api.route('/get_user/<email>', methods=['GET'])
+def get_user():
+    pass
+
+
+@api.route('/register', methods=['POST'])
+def register():
+    data = request.get_json()
+    print(data)
+    return jsonify(data)

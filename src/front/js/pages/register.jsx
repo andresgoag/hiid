@@ -2,13 +2,27 @@ import React from "react";
 import "../../styles/login.scss";
 import { Input } from "../component/input.jsx";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Register = () => {
+	const { store, actions } = React.useContext(Context);
 	const [user, setUser] = React.useState({ email: "", password: "", passwordVerify: "" });
 
 	const handleInput = ev => {
 		const input = ev.currentTarget;
 		setUser({ ...user, [input.name]: input.value });
+	};
+
+	const saveUser = () => {
+		if (user.email != "" && user.password === user.passwordVerify) {
+			const newData = {
+				email: user.email,
+				password: user.password
+			};
+			actions.saveUser({ ...store.userModel, ...newData });
+		} else {
+			alert("Passwords do not match");
+		}
 	};
 
 	return (
@@ -61,7 +75,7 @@ export const Register = () => {
 						handler={handleInput}
 					/>
 
-					<input type="submit" className="form__submit" value="Create account" />
+					<input type="button" className="form__submit" value="Create account" onClick={saveUser} />
 
 					<label className="form__custom-checkbox" htmlFor="acepto-terminos">
 						<input type="checkbox" id="acepto-terminos" name="acepto-terminos" value="acepto-terminos" />
