@@ -9,7 +9,10 @@ export const Dashboard = () => {
 		<div className="dashboard">
 			<div className="w50 info">
 				<Info />
-				<Stats />
+				<div>
+					<p>Card Analytics</p>
+					<Stats />
+				</div>
 			</div>
 			<div className="w50">
 				<Landing />
