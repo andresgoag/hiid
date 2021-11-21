@@ -11,7 +11,8 @@ import { Info } from "./component/info.jsx";
 import { Landing } from "./pages/landing.jsx";
 import { Stats } from "./component/stats.jsx";
 import { Dashboard } from "./pages/dashboard.jsx";
-
+import { Share } from "./pages/share.jsx";
+import { Directory } from "./pages/directory.jsx";
 import injectContext from "./store/appContext";
 
 //create your first component
@@ -43,6 +44,14 @@ const Layout = () => {
 
 						<Route exact path="/graph">
 							<Stats />
+						</Route>
+
+						<Route exact path="/share">
+							<Share />
+						</Route>
+
+						<Route exact path="/directory">
+							<Directory />
 						</Route>
 
 						<Route exact path="/:username">
