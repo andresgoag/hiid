@@ -28,14 +28,14 @@ button {
 }
 .name-typography{
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: var(--title-font);
     line-height: 7px;
     
 }
 .last-name-typography{
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: var(--title-font);
     line-height: 7px;
 }
@@ -50,4 +50,29 @@ button {
     font-size: 1em;
     color: var(--title-font);
     line-height: 0px;
+}
+.button-outline{
+    -webkit-appearance: none;
+    border: 3px solid var(--primary-color);
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    margin-bottom: 19px;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.button-outline:hover {
+    box-shadow: 1px 2px 5px #a3a3a3;
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-color);
+    margin-bottom: 19px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
 }

@@ -12,12 +12,21 @@
 }
 .card-front{
     display: block;
+    width: 60%;
+    padding-left: 10px;
 }
 .company-logo img{
-    height: 90px;
-    width: 90px;
+    width: 100%;
     margin: 0px 20px 0px 0px;
 }
+.company-logo{
+    width: 40%;
+    padding: 10px;
+}
+.gap-30{
+    margin-top: 30px;
+}
+
 @media (min-width: 1024px) {
 
 }
