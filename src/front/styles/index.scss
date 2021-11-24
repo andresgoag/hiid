@@ -26,30 +26,44 @@ button {
 .hidden {
     display: none;
 }
+.gap-t-30{
+    margin-top: 30px;
+}
+.gap-t-20{
+    margin-top: 20px;
+}
+.gap-t-10{
+    margin-top: 10px;
+}
+.gap-b-30{
+    margin-bottom: 30px;
+}
+.gap-b-20{
+    margin-bottom: 20px;
+}
+.gap-b-10{
+    margin-bottom: 10px;
+}
 .name-typography{
     font-weight: 600;
     font-size: 1.6em;
     color: var(--title-font);
-    line-height: 7px;
     
 }
 .last-name-typography{
     font-weight: 300;
     font-size: 1.6em;
     color: var(--title-font);
-    line-height: 7px;
 }
 .job-title-typography{
     font-weight: 300;
     font-size: 1em;
     color: var(--title-font);
-    line-height: 7px;
 }
 .company-typography{
     font-weight: 300;
     font-size: 1em;
     color: var(--title-font);
-    line-height: 0px;
 }
 .button-outline{
     -webkit-appearance: none;

@@ -16,18 +16,20 @@ export const Landing = () => {
 		<div>
 			<p>{params.username}</p>
 			<div>
-				<div className="card w50">
-					<CardFront
-						name={store.userModel.name}
-						last={store.userModel.last_name}
-						title={store.userModel.job_title}
-						company={store.userModel.company}
-					/>
+				<div className="card-flex-main">
+					<div className="card w50">
+						<CardFront
+							name={store.userModel.name}
+							last={store.userModel.last_name}
+							title={store.userModel.job_title}
+							company={store.userModel.company}
+						/>
+					</div>
+					<div className="card w50">
+						<CardBack slogan={store.userModel.slogan} />
+					</div>
 				</div>
-				<div className="card w50">
-					<CardBack slogan={store.userModel.slogan} />
-				</div>
-				<div>
+				<div className="description">
 					<Description description={store.userModel.description} />
 				</div>
 				<div>

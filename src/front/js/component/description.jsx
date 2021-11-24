@@ -5,7 +5,7 @@ export const Description = props => {
 	return (
 		<div>
 			<h3>Description</h3>
-			<p>{props.description}</p>
+			<p className="last-name-typography">{props.description}</p>
 		</div>
 	);
 };
