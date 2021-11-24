@@ -2,6 +2,8 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 
 export const Graph = () => {
+	// data.day
+
 	const [data, setData] = React.useState({
 		x: ["01012021", "01012021", "01012021", "01012021", "01012021"],
 		y: [100, 200, 150, 200, 500]
