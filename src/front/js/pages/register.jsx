@@ -37,7 +37,7 @@ export const Register = () => {
 
 			<div className="slogan-container">
 				<div className="slogan-subcontainer">
-					<p className="slogan">Connect with your customers like never before</p>
+					<p className="slogan">Start your journey with Hiid and network like a pro</p>
 					<p className="crear_cuenta_desktop">
 						Already a member?
 						<Link to="/login"> Login</Link>

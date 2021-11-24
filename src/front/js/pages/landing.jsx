@@ -6,6 +6,7 @@ import { Description } from "../component/description.jsx";
 import { SocialGroup } from "../component/social_group.jsx";
 import { OtherLinksGroup } from "../component/other_links_group.jsx";
 import { Context } from "../store/appContext";
+import "../../styles/landing.scss";
 
 export const Landing = () => {
 	const { store, actions } = React.useContext(Context);
@@ -15,7 +16,7 @@ export const Landing = () => {
 		<div>
 			<p>{params.username}</p>
 			<div>
-				<div className="w50">
+				<div className="card w50">
 					<CardFront
 						name={store.userModel.name}
 						last={store.userModel.last_name}
@@ -23,7 +24,7 @@ export const Landing = () => {
 						company={store.userModel.company}
 					/>
 				</div>
-				<div>
+				<div className="card w50">
 					<CardBack slogan={store.userModel.slogan} />
 				</div>
 				<div>

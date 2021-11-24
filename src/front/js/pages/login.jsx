@@ -66,7 +66,7 @@ export const Login = () => {
 			</div>
 
 			<p className="crear_cuenta">
-				Not a member? <a href="#">Create an account</a>
+				Not a member? <Link to="/register"> Create an account</Link>
 			</p>
 		</div>
 	);

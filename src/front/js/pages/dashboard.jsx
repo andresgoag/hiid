@@ -14,7 +14,7 @@ export const Dashboard = () => {
 					<Stats />
 				</div>
 			</div>
-			<div className="w50">
+			<div className="landing-container w50">
 				<Landing />
 				<div>
 					<button>

@@ -5,6 +5,7 @@
 :root {
     --primary-color: #9cd69c;
     --primary-font: #AAAAAA;
+    --title-font: #181818;
 }
 
 * {
@@ -24,4 +25,29 @@ button {
 
 .hidden {
     display: none;
+}
+.name-typography{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--title-font);
+    line-height: 7px;
+    
+}
+.last-name-typography{
+    font-weight: 300;
+    font-size: 1.5em;
+    color: var(--title-font);
+    line-height: 7px;
+}
+.job-title-typography{
+    font-weight: 300;
+    font-size: 1em;
+    color: var(--title-font);
+    line-height: 7px;
+}
+.company-typography{
+    font-weight: 300;
+    font-size: 1em;
+    color: var(--title-font);
+    line-height: 0px;
 }
