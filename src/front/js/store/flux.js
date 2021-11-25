@@ -1,7 +1,6 @@
 import { userModel } from "../utils/userModel.js";
 
 // const URL_API = process.env.BACKEND_URL;
-const URL_API = "https://3001-gray-impala-tny62805.ws-us18.gitpod.io/api";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -19,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ ...store, userModel: { ...store.userModel, [property]: value } });
 			},
 			saveUser: user => {
-				fetch(`${URL_API}/register`, {
+				fetch(`${process.env.BACKEND_URL}/save_user`, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(user)
@@ -30,6 +29,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 					})
 					.then(data => console.log(data))
+					.catch(error => console.error("Error:", error));
+			},
+			getQr: () => {
+				const data = { username: getStore().userModel.username };
+				const datajson = JSON.stringify(data);
+
+				console.log(data);
+				console.log(datajson);
+
+				fetch(`${process.env.BACKEND_URL}/get_qr`, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: datajson
+				})
+					.then(response => {
+						if (response.ok) {
+							return response.json();
+						}
+					})
+					.then(data => {
+						console.log(data);
+						if (data.message == "ok") {
+							return "created";
+						}
+					})
 					.catch(error => console.error("Error:", error));
 			},
 
