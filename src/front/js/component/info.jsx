@@ -25,7 +25,13 @@ export const Info = () => {
 					handler={handleInput}
 				/>
 			))}
-			<button>Save</button>
+			<button
+				className="form__submit"
+				onClick={() => {
+					actions.saveUser(store.userModel);
+				}}>
+				Save
+			</button>
 		</div>
 	);
 };

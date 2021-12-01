@@ -2,9 +2,13 @@ import React from "react";
 import { Info } from "../component/info.jsx";
 import { Landing } from "./landing.jsx";
 import { Stats } from "../component/stats.jsx";
+import { Context } from "../store/appContext";
 import "../../styles/dashboard.scss";
+import PropTypes from "prop-types";
 
-export const Dashboard = () => {
+export const Dashboard = props => {
+	const { store, actions } = React.useContext(Context);
+
 	return (
 		<div className="dashboard">
 			<div className="w50 info">
@@ -17,7 +21,12 @@ export const Dashboard = () => {
 			<div className="landing-container w50">
 				<Landing />
 				<div>
-					<button>
+					<button
+						onClick={() => {
+							if (actions.getQr() == "created") {
+								props.history.push("/share");
+							}
+						}}>
 						<i className="fas fa-qrcode" />
 						Share
 					</button>
@@ -25,4 +34,8 @@ export const Dashboard = () => {
 			</div>
 		</div>
 	);
+};
+
+Dashboard.propTypes = {
+	history: PropTypes.object
 };
