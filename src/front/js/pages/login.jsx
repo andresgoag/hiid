@@ -1,17 +1,52 @@
 import React, { useContext } from "react";
 import "../../styles/login.scss";
 import { Input } from "../component/input.jsx";
-import { Link } from "react-router-dom";
-// import { Context } from "../store/appContext";
+import { Link, useHistory } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Login = () => {
-	// const { store, actions } = useContext(Context);
-
+	const history = useHistory();
+	const { actions } = React.useContext(Context);
 	const [user, setUser] = React.useState({ email: "", password: "" });
 
 	const handleInput = ev => {
 		const input = ev.currentTarget;
 		setUser({ ...user, [input.name]: input.value });
+	};
+
+	const loginUser = () => {
+		if (user.email != "" && user.password != "") {
+			const newData = {
+				email: user.email,
+				password: user.password
+			};
+
+			fetch(`${process.env.BACKEND_URL}/login`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(newData)
+			})
+				.then(response => {
+					if (response.ok) {
+						return response.json();
+					} else if (response.status == 400) {
+						return response.json();
+					} else {
+						return new Error("Error fetching the api");
+					}
+				})
+				.then(data => {
+					if (data.status) {
+						actions.setUserModel(data.user);
+						history.push("/dashboard");
+					} else {
+						return alert(data.message);
+					}
+				})
+				.catch(error => console.error("Error:", error));
+		} else {
+			alert("Blank fields not allowed");
+		}
 	};
 
 	return (
@@ -55,7 +90,7 @@ export const Login = () => {
 						handler={handleInput}
 					/>
 
-					<input type="button" className="form__submit" value="Log in" />
+					<input type="button" className="form__submit" value="Log in" onClick={loginUser} />
 
 					<label className="form__custom-checkbox" htmlFor="mantener_sesion">
 						<input type="checkbox" id="mantener_sesion" name="mantener_sesion" value="mantener_sesion" />

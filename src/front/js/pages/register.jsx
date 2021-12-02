@@ -1,10 +1,11 @@
 import React from "react";
 import "../../styles/login.scss";
 import { Input } from "../component/input.jsx";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Register = () => {
+	const history = useHistory();
 	const { store, actions } = React.useContext(Context);
 	const [user, setUser] = React.useState({ email: "", password: "", passwordVerify: "" });
 
@@ -19,7 +20,31 @@ export const Register = () => {
 				email: user.email,
 				password: user.password
 			};
-			actions.saveUser({ ...store.userModel, ...newData });
+			let user = { ...store.userModel, ...newData };
+			user.username = `${user.email}${Date.now()}`;
+			fetch(`${process.env.BACKEND_URL}/save_user`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(user)
+			})
+				.then(response => {
+					if (response.ok) {
+						return response.json();
+					} else if (response.status == 400) {
+						return response.json();
+					} else {
+						return new Error("Error fetching the api");
+					}
+				})
+				.then(data => {
+					if (data.status) {
+						actions.setUserModel(data.user);
+						history.push("/dashboard");
+					} else {
+						return alert(data.message);
+					}
+				})
+				.catch(error => console.error("Error:", error));
 		} else {
 			alert("Passwords do not match");
 		}

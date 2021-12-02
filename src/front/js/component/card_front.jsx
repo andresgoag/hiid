@@ -1,7 +1,28 @@
 import React from "react";
 import { PropTypes } from "prop-types";
+import { Context } from "../store/appContext";
 
 export const CardFront = props => {
+	const { store } = React.useContext(Context);
+
+	const saveToContacts = () => {
+		const data = {
+			name: store.userModel.name,
+			last_name: store.userModel.last_name,
+			company: store.userModel.company,
+			job_title: store.userModel.job_title,
+			email: store.userModel.email,
+			phone: store.userModel.phone,
+			website: store.userModel.website
+		};
+
+		fetch(`${process.env.BACKEND_URL}/get_contact`, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(data)
+		});
+	};
+
 	return (
 		<div>
 			<div className="card-flex">
@@ -18,7 +39,7 @@ export const CardFront = props => {
 				</div>
 			</div>
 			<div className="">
-				<input type="button" className=" button-outline" value="Save to contacts" />
+				<input type="button" className=" button-outline" value="Save to contacts" onClick={saveToContacts} />
 			</div>
 		</div>
 	);

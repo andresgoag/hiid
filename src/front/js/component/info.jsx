@@ -11,6 +11,32 @@ export const Info = () => {
 		actions.setUserProperty(input.name, input.value);
 	};
 
+	const updateUser = user => {
+		fetch(`${process.env.BACKEND_URL}/update_user`, {
+			method: "PUT",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(user)
+		})
+			.then(response => {
+				if (response.ok) {
+					return response.json();
+				} else if (response.status == 400) {
+					return response.json();
+				} else {
+					return new Error("Error fetching the api");
+				}
+			})
+			.then(data => {
+				if (data.status) {
+					actions.setUserModel(data.user);
+					alert("User updated succesfully");
+				} else {
+					return alert(data.message);
+				}
+			})
+			.catch(error => console.error("Error:", error));
+	};
+
 	return (
 		<div>
 			{infoInputs.map((item, index) => (
@@ -28,7 +54,7 @@ export const Info = () => {
 			<button
 				className="form__submit"
 				onClick={() => {
-					actions.saveUser(store.userModel);
+					updateUser(store.userModel);
 				}}>
 				Save
 			</button>
