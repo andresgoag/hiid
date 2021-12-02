@@ -83,21 +83,22 @@ def create_qr():
     img.save("qr.png")
     return {"message":"ok"}, 200
 
-@api.route('/get_contact', methods=['POST'])
+@api.route('/get_contact', methods=['GET'])
 def get_contact():
-    data = request.get_json()
+    
+    data = request.args
 
     contact = (
-    f"BEGIN:VCARD\n"
-    f"VERSION:3.0\n"
-    f"PRODID:-//Apple Inc.//iPhone OS 14.4//EN\n"
-    f"N:{data['last_name']} - {data['company']};{data['name']} ;;;\n"
-    f"FN:{data['name']} {data['last_name']} - {data['company']}\n"
-    f"ORG:{data['job_title']};\n"
-    f"EMAIL;type=INTERNET;type=WORK;type=pref:{data['email']}\n"
-    f"TEL;type=CELL;type=VOICE;type=pref:{data['phone']}\n"
-    f"URL;type=WORK;type=pref:{data['website']}\n"
-    f"END:VCARD\n"
+        f"BEGIN:VCARD\n"
+        f"VERSION:3.0\n"
+        f"PRODID:-//Apple Inc.//iPhone OS 14.4//EN\n"
+        f"N:{data['last_name']} - {data['company']};{data['name']} ;;;\n"
+        f"FN:{data['name']} {data['last_name']} - {data['company']}\n"
+        f"ORG:{data['job_title']};\n"
+        f"EMAIL;type=INTERNET;type=WORK;type=pref:{data['email']}\n"
+        f"TEL;type=CELL;type=VOICE;type=pref:{data['phone']}\n"
+        f"URL;type=WORK;type=pref:{data['website']}\n"
+        f"END:VCARD\n"
     )
 
     contact_file = open("src/contact.vcf", "w")
