@@ -69,6 +69,9 @@ button {
     font-size: 1em;
     color: var(--title-font);
 }
+.custom-p{
+    margin: 0;
+}
 .button-outline{
     -webkit-appearance: none;
     border: 3px solid var(--primary-color);
