@@ -2,6 +2,29 @@ import React from "react";
 import { MiniView } from "../component/miniview.jsx";
 
 export const Directory = () => {
+	const [allUsers, setAllUsers] = React.useState([]);
+	const [users, setUsers] = React.useState([]);
+	const [sector, setSector] = React.useState("");
+	const [zip, setZip] = React.useState("");
+
+	React.useEffect(() => {
+		fetch(`${process.env.BACKEND_URL}/allusers`)
+			.then(response => response.json())
+			.then(data => {
+				setAllUsers(data);
+				setUsers(data);
+			})
+			.catch(error => console.error(error));
+	}, []);
+
+	React.useEffect(
+		() => {
+			const filteredUsers = allUsers.filter(user => user.sector.includes(sector) && user.zip_code.includes(zip));
+			setUsers(filteredUsers);
+		},
+		[sector, zip]
+	);
+
 	return (
 		<div>
 			<p>Find experts in every discipline</p>
@@ -11,12 +34,11 @@ export const Directory = () => {
 				<div className="input__form">
 					<input
 						type="string"
-						id="zip"
-						name="zip"
+						id="sector"
+						name="sector"
 						placeholder="Try: “engineering”"
-						value=""
-						required
-						onChange=""
+						value={sector}
+						onChange={ev => setSector(ev.target.value)}
 					/>
 				</div>
 				<div className="input__form">
@@ -25,15 +47,18 @@ export const Directory = () => {
 						id="zip"
 						name="zip"
 						placeholder="Filter by: Zip code"
-						value=""
-						required
-						onChange=""
+						value={zip}
+						onChange={ev => setZip(ev.target.value)}
 					/>
 				</div>
-				<button>Search</button>
 			</div>
 
-			<MiniView />
+			<div>
+				<p>Results</p>
+				{users.map((user, index) => (
+					<MiniView key={`users${index}`} {...user} />
+				))}
+			</div>
 		</div>
 	);
 };

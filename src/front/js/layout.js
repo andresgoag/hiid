@@ -14,6 +14,7 @@ import { Dashboard } from "./pages/dashboard.jsx";
 import { Share } from "./pages/share.jsx";
 import { Directory } from "./pages/directory.jsx";
 import injectContext from "./store/appContext";
+import { Dash } from "./pages/dash.jsx";
 
 //create your first component
 const Layout = () => {
@@ -39,7 +40,7 @@ const Layout = () => {
 						</Route>
 
 						<Route exact path="/dashboard">
-							<Dashboard />
+							<Dash />
 						</Route>
 
 						<Route exact path="/graph">
