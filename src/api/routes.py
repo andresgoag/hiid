@@ -79,7 +79,7 @@ def login():
 def create_qr():
     data = request.get_json()
     print(data)
-    img = qrcode.make(f'https://3000-gray-impala-tny62805.ws-us20.gitpod.io/{data["username"]}')
+    img = qrcode.make(f'https://3000-gray-impala-tny62805.ws-us21.gitpod.io/{data["username"]}')
     img.save("qr.png")
     return {"message":"ok"}, 200
 

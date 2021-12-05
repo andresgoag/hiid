@@ -91,10 +91,15 @@
         display: none;
     }
 
+    .mobile-container {
+        display: none;
+    }
+
     .desktop-container {
         display: flex;
         width: 100vw;
         height: 100vh;
+        background-color: #f8faf8;
     }
 
     .leftside {
@@ -107,9 +112,11 @@
         flex-direction: column;
         justify-content: space-between;
         font-size: 3.5rem;
-        color: var(--title-font);
+        color: #fff;
         padding: 0 20px;
-        border-right: 1px solid var(--title-font);
+        background-color: var(--primary-color);
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
     .leftside span {
@@ -154,7 +161,7 @@
         align-items: center;
         justify-content: end;
         padding: 20px;
-        border-bottom: 1px solid var(--title-font);
+        border-bottom: 1px solid var(--border);
         text-align: end;
     }
 
@@ -178,5 +185,6 @@
 
     .main-container {
         flex-grow: 1;
+        padding: 50px;
     }
 }

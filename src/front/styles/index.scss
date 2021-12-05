@@ -3,20 +3,21 @@
 */
 
 :root {
-    --primary-color: #9cd69c;
+    --primary-color: #6fc76f;
     --primary-font: #AAAAAA;
     --title-font: #181818;
+    --border: #f1a025;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif; 
 }
 
 html {
     font-size: 62.5%;
-    font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -96,4 +97,26 @@ button {
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
+}
+
+.primary-button {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 19px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-button:hover {
+    background-color: #9ad89ada;
+    box-shadow: 1px 2px 5px #a3a3a3;
 }

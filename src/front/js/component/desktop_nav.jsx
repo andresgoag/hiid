@@ -5,7 +5,7 @@ export const DesktopNav = () => {
 		<aside className="leftside">
 			<div className="top">
 				<figure className="header-logo">
-					<img src="https://m-lp.com/wp-content/uploads/2021/11/Hiidlogo.png" alt="" />
+					<img src="https://gghtec.com/wp-content/uploads/2021/12/HiidWhite.svg" alt="" />
 				</figure>
 				<nav>
 					<ul className="navigation-list">

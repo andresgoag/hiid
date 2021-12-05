@@ -100,7 +100,7 @@ export const Register = () => {
 						handler={handleInput}
 					/>
 
-					<input type="button" className="form__submit" value="Create account" onClick={saveUser} />
+					<input type="button" className="primary-button" value="Create account" onClick={saveUser} />
 
 					<label className="form__custom-checkbox" htmlFor="acepto-terminos">
 						<input type="checkbox" id="acepto-terminos" name="acepto-terminos" value="acepto-terminos" />

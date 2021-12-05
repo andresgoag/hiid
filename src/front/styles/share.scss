@@ -1,0 +1,30 @@
+.share-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.share-container div {
+    width: 90%;
+    max-width: 350px;
+}
+
+.share-container figure {
+    width: 100%;
+    height: 180px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-container img {
+    height: 100%;
+    border-radius: 10px;
+}

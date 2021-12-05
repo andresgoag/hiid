@@ -15,7 +15,7 @@ export const Graph = () => {
 			{
 				label: "Visits",
 				data: data.y,
-				pointRadius: 10,
+				pointRadius: 5,
 				pointHitRadius: 20,
 				pointHoverRadius: 7,
 				pointBackgroundColor: "#9cd69c"
@@ -25,7 +25,7 @@ export const Graph = () => {
 
 	const graphOptions = {
 		layout: {
-			padding: 20
+			padding: 10
 		},
 		plugins: {
 			legend: {
@@ -35,7 +35,7 @@ export const Graph = () => {
 		elements: {
 			line: {
 				borderColor: "#9cd69c",
-				borderWidth: 6,
+				borderWidth: 3,
 				tension: 0.2,
 				fill: true,
 				backgroundColor: "rgba(154, 216, 154, 0.5)"
@@ -45,10 +45,10 @@ export const Graph = () => {
 			y: {
 				beginAtZero: true,
 				ticks: {
-					padding: 20,
+					padding: 10,
 					color: "#aaaaaa",
 					font: {
-						size: 20
+						size: 13
 					}
 				},
 				grid: {
@@ -57,10 +57,10 @@ export const Graph = () => {
 			},
 			x: {
 				ticks: {
-					padding: 20,
+					padding: 10,
 					color: "#aaaaaa",
 					font: {
-						size: 20
+						size: 13
 					}
 				}
 			}

@@ -15,6 +15,8 @@ import { Share } from "./pages/share.jsx";
 import { Directory } from "./pages/directory.jsx";
 import injectContext from "./store/appContext";
 import { Dash } from "./pages/dash.jsx";
+import { NewDashboard } from "./pages/new_dashboard.jsx";
+import { MyHiid } from "./pages/my_hiid.jsx";
 
 //create your first component
 const Layout = () => {
@@ -31,16 +33,28 @@ const Layout = () => {
 							<Home />
 						</Route>
 
-						<Route exact path="/login">
-							<Login />
-						</Route>
-
 						<Route exact path="/register">
 							<Register />
 						</Route>
 
+						<Route exact path="/login">
+							<Login />
+						</Route>
+
 						<Route exact path="/dashboard">
+							<NewDashboard />
+						</Route>
+
+						<Route exact path="/myhiid">
+							<MyHiid />
+						</Route>
+
+						<Route exact path="/newdash">
 							<Dash />
+						</Route>
+
+						<Route exact path="/dashboard">
+							<Dashboard />
 						</Route>
 
 						<Route exact path="/graph">

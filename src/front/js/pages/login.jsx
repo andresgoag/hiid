@@ -90,7 +90,7 @@ export const Login = () => {
 						handler={handleInput}
 					/>
 
-					<input type="button" className="form__submit" value="Log in" onClick={loginUser} />
+					<input type="button" className="primary-button" value="Log in" onClick={loginUser} />
 
 					<label className="form__custom-checkbox" htmlFor="mantener_sesion">
 						<input type="checkbox" id="mantener_sesion" name="mantener_sesion" value="mantener_sesion" />
