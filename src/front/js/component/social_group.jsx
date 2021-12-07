@@ -6,7 +6,7 @@ import { socialArray } from "../utils/userModel.js";
 export const SocialGroup = () => {
 	const { store, actions } = React.useContext(Context);
 	return (
-		<div>
+		<div className="social-group">
 			{socialArray.map((item, index) => {
 				if (item[0] == "whatsapp" && store.userModel.phone != "") {
 					const whatsappUrl = `https://api.whatsapp.com/send?phone=${store.userModel.phone}`;

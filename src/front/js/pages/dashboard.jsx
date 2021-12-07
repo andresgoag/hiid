@@ -3,7 +3,6 @@ import { Info } from "../component/info.jsx";
 import { Preview } from "../component/preview.jsx";
 import { Stats } from "../component/stats.jsx";
 import { Context } from "../store/appContext";
-import "../../styles/dashboard.scss";
 import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
 

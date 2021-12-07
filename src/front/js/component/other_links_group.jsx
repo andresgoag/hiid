@@ -6,7 +6,7 @@ import { otherLinksArray } from "../utils/userModel.js";
 export const OtherLinksGroup = () => {
 	const { store, actions } = React.useContext(Context);
 	return (
-		<div>
+		<div className="other-link-group">
 			{otherLinksArray.map((item, index) => {
 				if (store.userModel[item[0]] != "") {
 					return (

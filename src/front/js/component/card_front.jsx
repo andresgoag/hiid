@@ -11,22 +11,20 @@ export const CardFront = props => {
 	}&website=${store.userModel.website}`;
 
 	return (
-		<div>
-			<div className="card-flex">
+		<div className="card">
+			<div className="front-top mb-3">
 				<figure className="company-logo">
 					<img src="https://gghtec.com/wp-content/uploads/2021/11/CompanyLogoHiid.png" alt="" />
 				</figure>
 				<div className="card-front">
-					<div className="">
-						<p className="name-typography">{props.name}</p>
-						<p className="last-name-typography">{props.last}</p>
-					</div>
-					<p className="job-title-typography">{props.title}</p>
-					<p className="company-typography">{props.company}</p>
+					<p className="name">{props.name}</p>
+					<p className="last-name">{props.last}</p>
+					<p className="job-title">{props.title}</p>
+					<p className="company">{props.company}</p>
 				</div>
 			</div>
-			<div className="">
-				<a href={saveRoute} target="_blank" className="button-outline" rel="noopener noreferrer">
+			<div className="save-contact-container">
+				<a href={saveRoute} target="_blank" className="button-save-contact" rel="noopener noreferrer">
 					Save to contacts
 				</a>
 			</div>

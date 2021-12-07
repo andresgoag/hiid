@@ -7,8 +7,8 @@ export const CardBack = props => {
 		// 	<p>{props.slogan}</p>
 		// </div>
 
-		<div className="company-logo-back">
-			<figure>
+		<div className="card">
+			<figure className="company-logo mb-3">
 				<img src="https://gghtec.com/wp-content/uploads/2021/11/CompanyLogoHiid.png" alt="" />
 			</figure>
 			<div>

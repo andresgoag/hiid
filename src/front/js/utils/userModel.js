@@ -35,7 +35,7 @@ export const socialArray = [
 ];
 
 export const otherLinksArray = [
-	["website", "fas fa-globe", "visit wwebsite"],
+	["website", "fas fa-globe", "visit website"],
 	["maps", "fas fa-map-marker-alt", "view in map"],
 	["email", "fas fa-envelope", "send email"]
 ];

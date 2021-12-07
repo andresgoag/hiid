@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
 .mobile-dashboard__header {
     width: 100%;
     display: flex;
@@ -67,6 +71,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.mobile-navigation-list li:hover {
+    color: var(--border)
 }
 
 .mobile-logout {
@@ -140,6 +148,10 @@
         align-items: center;
         height: 70px;
         cursor: pointer;
+    }
+
+    .navigation-list li:hover, .logout:hover {
+        color: var(--border);
     }
 
     .logout {

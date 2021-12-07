@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 
 export const Social = props => {
 	return (
-		<a onClick={() => window.open(props.link, "_blank")}>
+		<a className="social-link" onClick={() => window.open(props.link, "_blank")}>
 			<i className={props.icon} />
 		</a>
 	);

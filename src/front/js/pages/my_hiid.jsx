@@ -6,6 +6,7 @@ import { Info } from "../component/info.jsx";
 import { Preview } from "../component/preview.jsx";
 import { Context } from "../store/appContext";
 import "../../styles/navigation.scss";
+import "../../styles/myhiid.scss";
 
 export const MyHiid = () => {
 	const { store, actions } = React.useContext(Context);
@@ -20,7 +21,13 @@ export const MyHiid = () => {
 		<div>
 			<HeaderMobile toggleNav={toggleNav} />
 			{sidenav ? <MobileNav /> : null}
-			<div className="mobile-container">hola</div>
+			<div className="mobile-container">
+				<p className="title-myinformation">My Information</p>
+				<Info />
+				<div className="preview-mobile">
+					<Preview />
+				</div>
+			</div>
 			<div className="desktop-container">
 				<DesktopNav />
 				<div className="rightside">
@@ -35,10 +42,11 @@ export const MyHiid = () => {
 					</div>
 					<div className="main-container">
 						<div className="dashboard">
-							<div className="w50 info">
+							<div className="dash-containers info">
+								<p className="title-myinformation">My Information</p>
 								<Info />
 							</div>
-							<div className="landing-container w50">
+							<div className="dash-containers landing-container">
 								<Preview />
 							</div>
 						</div>

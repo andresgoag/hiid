@@ -52,7 +52,7 @@ export const Info = () => {
 				/>
 			))}
 			<button
-				className="form__submit"
+				className="primary-button"
 				onClick={() => {
 					updateUser(store.userModel);
 				}}>
