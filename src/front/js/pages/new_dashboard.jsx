@@ -4,6 +4,7 @@ import { MobileNav } from "../component/mobile_nav.jsx";
 import { DesktopNav } from "../component/desktop_nav.jsx";
 import { Stats } from "../component/stats.jsx";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 import "../../styles/navigation.scss";
 import "../../styles/newDashboard.scss";
 
@@ -48,7 +49,9 @@ export const NewDashboard = () => {
 					<p className="main__content-title">Your QR code</p>
 					<div className="main__content-content">
 						<figure>{qrReady ? <img src={qrcode} alt="" /> : null}</figure>
-						<button className="primary-button">View share options</button>
+						<Link to="/share">
+							<button className="primary-button">View share options</button>
+						</Link>
 					</div>
 				</div>
 
@@ -82,7 +85,9 @@ export const NewDashboard = () => {
 								<p className="main__content-title">Your QR code</p>
 								<div className="main__content-content">
 									<figure>{qrReady ? <img src={qrcode} alt="" /> : null}</figure>
-									<button className="primary-button">View share options</button>
+									<Link to="/share">
+										<button className="primary-button">View share options</button>
+									</Link>
 								</div>
 							</div>
 

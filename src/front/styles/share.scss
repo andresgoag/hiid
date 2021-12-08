@@ -1,22 +1,18 @@
 .share-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 200px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
-.share-container div {
-    width: 90%;
-    max-width: 350px;
-}
 
 .share-container figure {
-    width: 100%;
-    height: 180px;
+    width: 40%;
+    min-width: 300px;
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     background-color: var(--primary-color);
     border-radius: 15px;
     display: flex;
@@ -25,6 +21,11 @@
 }
 
 .share-container img {
-    height: 100%;
+    width: 100%;
     border-radius: 10px;
+}
+
+.share-container button {
+    width: 40%;
+    min-width: 300px;
 }

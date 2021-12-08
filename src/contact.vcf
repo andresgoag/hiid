@@ -1,10 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
 PRODID:-//Apple Inc.//iPhone OS 14.4//EN
-N:Gomez Agudelo - Hiid;Andres ;;;
-FN:Andres Gomez Agudelo - Hiid
-ORG:Developer;
-EMAIL;type=INTERNET;type=WORK;type=pref:andresgomezagudelo@hotmail.com
-TEL;type=CELL;type=VOICE;type=pref:3147983845
-URL;type=WORK;type=pref:Webandresgoag
+N:Fuentes - ;Dario ;;;
+FN:Dario Fuentes - 
+ORG:Ingeniero;
+EMAIL;type=INTERNET;type=WORK;type=pref:andres1@gmail.com
+TEL;type=CELL;type=VOICE;type=pref:
+URL;type=WORK;type=pref:
 END:VCARD

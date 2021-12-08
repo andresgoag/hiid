@@ -20,12 +20,12 @@ export const Register = () => {
 				email: user.email,
 				password: user.password
 			};
-			let user = { ...store.userModel, ...newData };
-			user.username = `${user.email}${Date.now()}`;
+			let userComplete = { ...store.userModel, ...newData };
+			userComplete.username = `${userComplete.email}${Date.now()}`;
 			fetch(`${process.env.BACKEND_URL}/save_user`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(user)
+				body: JSON.stringify(userComplete)
 			})
 				.then(response => {
 					if (response.ok) {
